@@ -1,14 +1,13 @@
 <template>
   <b-container>
-  <b-navbar-nav variant="info" type="dark">
+  <b-navbar variant="primary" type="dark" class="mb-3">
     <b-navbar-brand href="#">Fibra Amiga</b-navbar-brand>
-  </b-navbar-nav>
+  </b-navbar>
     <b-form v-if="show" @submit="onSubmit" @reset="onReset">
       <b-form-group
         id="input-group-1"
         label="Quantas pessoas moram na sua casa?"
-        label-for="qtd_pessoas"
-      >
+        label-for="qtd_pessoas">
         <b-form-input
           id="qtd_pessoas"
           v-model="form.qtd_pessoas"
@@ -283,9 +282,9 @@
           tempo_jogo_online: 0,
           tempo_rede_sociais: 0,
           tempo_stream_video: 0,
-          mais_velocidade: 0,
-          menos_travamento: 0,
-          menos_pixelamento: 0,
+          mais_velocidade: 1,
+          menos_travamento: 1,
+          menos_pixelamento: 1,
           uso_simultaneo: 0,
         },
         possui_wifi: [
