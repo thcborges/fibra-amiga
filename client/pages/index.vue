@@ -353,12 +353,18 @@
           this.form.menos_pixelamento +
           this.form.uso_simultaneo;
       },
+      querMaisInternet(plano) {
+        if (this.form.mais_velocidade === 0)
+          return true
+        else
+          return this.form.velocidade_internet < plano;
+      },
       getDiscurso(totalPontos) {
-        if (totalPontos <= 7 && this.form.velocidade_internet > 100) {
+        if (totalPontos <= 7 && this.querMaisInternet(100)) {
           return "Analisando seu perfil, recomendamos a internet com velocidade de 100GB de download, que te permitirá navegar com maior tranquilidade e 60 e te deixará tranquilo quando precisar falar com a empresa e os amigos na internet. Sendo fibra, é um excelente, garantindo velocidade contante, num valor imbatível de R$ 99,9"
-        } else if (totalPontos <= 14 && this.form.velocidade_internet > 100) {
+        } else if (totalPontos <= 14 && this.querMaisInternet(100)) {
           return "Analisando seu perfil, recomendamos a internet com velocidade de 100GB de download, que te permitirá navegar com maior tranquilidade e 60 e te deixará tranquilo quando precisar falar com a empresa e os amigos na internet. Sendo fibra, é um excelente, garantindo velocidade contante, num valor imbatível de R$ 99,9"
-        } else if (totalPontos <= 21 && this.form.velocidade_internet > 100) {
+        } else if (totalPontos <= 21 && this.querMaisInternet(100)) {
           return "Analisando seu perfil, recomendamos a internet com velocidade de 100GB de download, que te permitirá navegar com maior tranquilidade e 60 e te deixará tranquilo quando precisar falar com a empresa e os amigos na internet. Sendo fibra, é um excelente, garantindo velocidade contante, num valor imbatível de R$ 99,9"
         } else if (totalPontos <= 28) {
           return "Analisando seu perfil, recomendamos a internet com velocidade de 500GB de download, que te permitirá navegar com maior tranquilidade e 250 e te deixará tranquilo quando precisar falar com a empresa e os amigos na internet. Sendo fibra, é um excelente, garantindo velocidade contante, num valor imbatível de R$ 149,9"
