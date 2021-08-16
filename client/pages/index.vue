@@ -252,9 +252,7 @@
       <b-button v-b-modal.modal-1 type="submit" variant="primary">Calcular</b-button>
       <b-button type="reset" variant="danger">Apagar</b-button>
     </b-form>
-    <b-card class="mt-3" header="Form Data Result">
-      <pre class="m-0">{{ discurso }}</pre>
-    </b-card>
+
     <b-modal id="modal-1" title="BootstrapVue">
       <p class="my-4">{{ discurso }}</p>
     </b-modal>
